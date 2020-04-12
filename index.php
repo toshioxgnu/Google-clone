@@ -11,7 +11,11 @@
 <body>
     <div class="mainSection">
         <div class="logoContainer">
-            <img src="" alt="">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="">
+        </div>
+        <div class="searchContainer">
+            <input type="text" class="searchBox" name="term" placeholder="Enter a search term....">
+            <input class="searchButton" value="Search" role="button" type="submit">
         </div>
     </div>
 
