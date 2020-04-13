@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="assets/images/google-clone-logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <meta name="author" content="Jose Gonzalez, Udemy Course">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,8 +19,10 @@
             </div>
             <div class="searchContainer">
                 <form action="search.php" method="GET">
-                    <input type="text" class="searchBox" name="term" >
-                    <input class="searchButton" value="Search" role="button" type="submit">
+                    <div class="searchBarContainer">
+                        <input type="text" class="searchBox" name="term" >
+                        <button class="searchButton"  type="submit"><i class="fas fa-search"></i></button>
+                    </div>
                 </form>
             </div>
         </div>

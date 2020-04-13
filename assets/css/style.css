@@ -27,41 +27,51 @@ body {
 }
 
 .mainSection .logoContainer{
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 }
 .mainSection .logoContainer img{
     width: 100%;
 }
 
 .mainSection.searchContainer {
+    display: flex;
     margin-top: 20px;
-    width: 100%;
+
 }
-.mainSection .searchContainer form{
+.mainSection .searchContainer .searchBarContainer{
+    height: 44px;
+    border-radius: 20px ;
+    display: flex;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    width: 70%;
+    min-width: 630px;
+    box-sizing: border-box;
+}
+.mainSection .searchContainer .searchBarContainer form{
+    display: flex;
+    flex-direction: row;
     align-items: center;
-}
-.searchContainer .searchButton {
-    color: #656565;
-    background-color: #f5f5f5;
-    border: none;
-    height: 40px;
-    width: 80px;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
+
 }
 
-.searchContainer .searchBox {
-    border-radius: 30px;
-    border: 1px solid;
-    width: 500px;
-    height: 20px;
+
+.mainSection .searchContainer .searchBarContainer .searchBox {
+    flex: 1;
+    border: none;
     background-color: white;
-    outline-style: inherit;
     text-indent: 10px;
+    outline: none;
+    height: 44px;
+    border-radius: 20px 0px 0 20px ;
+}
+
+.searchContainer .searchBarContainer .searchButton {
+    border-radius: 0px 20px 20px 0px;
+    background-color: white;
+    border: none;
+    margin-top: 0px;
+    height: 44px;
 }
 
 .header {

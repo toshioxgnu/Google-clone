@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <?php
+        include("config.php");
         $term = isset($_GET['term']) ? $_GET['term'] : "hallo";
         $type = isset($_GET['type']) ?  $_GET['type'] : "sites";
      ?>
@@ -11,8 +12,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Search <?php echo $term?></title>
+    <link rel="stylesheet" href="assets/css/all.css">
     <script src="https://kit.fontawesome.com/8ef846cb6c.js" crossorigin="anonymous"></script>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
