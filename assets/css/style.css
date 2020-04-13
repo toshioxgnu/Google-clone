@@ -26,6 +26,14 @@ body {
     align-items: center;
 }
 
+.mainSection .logoContainer{
+    width: 200px;
+    height: 200px;
+}
+.mainSection .logoContainer img{
+    width: 100%;
+}
+
 .mainSection.searchContainer {
     margin-top: 20px;
     width: 100%;
@@ -56,3 +64,90 @@ body {
     text-indent: 10px;
 }
 
+.header {
+    background-color: azure;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.wrapper .headerContent{
+    height: 135px;
+    display: flex;
+    align-items: center;
+}
+
+.header .headerContent .logoContainer{
+    width: 150px;
+    height: 150px;
+    padding: 5px 20px;
+}
+
+.logoContainer img {
+    width: 100%;
+}
+.headerContent .searchContainer {
+    flex: 1;
+}
+
+.headerContent .searchBarContainer  {
+    height: 30px;
+    border-radius: 20px ;
+    display: flex;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    width: 70%;
+    max-width: 630px;
+    box-sizing: border-box;
+}
+
+.headerContent .searchBarContainer .searchBar {
+    flex: 1;
+    border: none;
+    background-color: white;
+    border-radius: 20px 0px 0 20px ;
+    text-indent: 10px;
+    outline: none;
+
+}
+.headerContent .searchContainer .searchBar form {
+    margin: 15px 0 28px 0;
+}
+
+.search {
+    border-radius: 0px 20px 20px 0px;
+    background-color: white;
+    border: none;
+    margin-top: 0px;
+}
+
+.search i{
+    background-color: white;
+}
+
+.headerContent .searchContainer form {
+    margin: 15px 0px 25px 0px;
+}
+
+.tabsContainer {
+    margin-left: 180px;
+}
+
+.tabsContainer .tabList{
+    margin: 0px;
+    padding: 0;
+}
+.tabsContainer .tabList li{
+    display: inline-block;
+    padding: 0 16px 12px 16px;
+    font-size: 13px;
+}
+
+.tabsContainer .tabList li a{
+    text-decoration: none;
+}
+
+.tabsContainer .tabList li.active{
+    border-bottom: 3px solid #0fbb9f;
+}
+.tabsContainer .tabList li.active a{
+    font-weight: bold;
+    color: #0fbb9f;
+}

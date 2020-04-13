@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="assets/images/google-clone-logo.png" type="image/png">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,7 +16,7 @@
                 <img alt="" src="assets/images/google-clone-logo.png">
             </div>
             <div class="searchContainer">
-                <form action="search.php" method="POST">
+                <form action="search.php" method="GET">
                     <input type="text" class="searchBox" name="term" >
                     <input class="searchButton" value="Search" role="button" type="submit">
                 </form>
