@@ -15,7 +15,7 @@
     <div class="wrapper indexPage">
         <div class="mainSection">
             <div class="logoContainer">
-                <img alt="" src="assets/images/google-clone-logo.png">
+                <img alt="" src="assets/images/google-clone-logo.png" title="ZEN  Logo">
             </div>
             <div class="searchContainer">
                 <form action="search.php" method="GET">

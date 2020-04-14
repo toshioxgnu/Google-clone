@@ -3,6 +3,7 @@
 <head>
     <?php
         include("config.php");
+        include("classes/SitesResultsProvider.php");
         $term = isset($_GET['term']) ? $_GET['term'] : "hallo";
         $type = isset($_GET['type']) ?  $_GET['type'] : "sites";
      ?>
@@ -42,6 +43,20 @@
             </div>
 
         </div>
+
+        <div class="mainresultsection">
+            <?php
+                $resultsProvider = new SitesResultsProvider($con);
+
+                $numResults =  $resultsProvider -> getnumResults($term);
+
+                echo "<p class='resultCount'> $numResults  Results Found</p>";
+
+                echo $resultsProvider -> getResultsHtml(1,20,$term);
+            ?>
+        </div>
+
+
     </div>
 
 
