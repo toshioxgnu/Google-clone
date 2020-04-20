@@ -46,7 +46,7 @@ class SitesResultsProvider
             $description = $this->trimField($description, 230);
             $resultsHtml .= "<div class='resultContainer'> 
 
-                            <h3 class='title'><a class='result' href='$url'>$title</a></h3>
+                            <h3 class='title'><a class='result' href='$url' data-LinkId='$id'>$title</a></h3>
                             <span class='url'>$url</span>    
                             <span class='description'>$description</span>    
                         </div>";

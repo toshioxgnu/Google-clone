@@ -53,7 +53,7 @@
 
                 echo "<p class='resultCount'> $numResults  Results Found</p>";
 
-                echo $resultsProvider -> getResultsHtml(1,$pageSize,$term);
+                echo $resultsProvider -> getResultsHtml($page,$pageSize,$term);
             ?>
         </div>
         <div class="paginationContainer">
@@ -66,7 +66,7 @@
                         $pagesLeft = min($pagesToShow, $numPages);
                         $currentPage = $page - floor($pagesToShow/2);
 
-                        if($currentPage <1 ){
+                        if($currentPage <= 1 ){
                             $currentPage = 1;
                         }
 
@@ -99,5 +99,7 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
