@@ -203,3 +203,24 @@ body {
 .resultContainer .description {
     font-size: 12px;
 }
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.pageButtons {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.pagenumberContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding-top: 60px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.pagenumberContainer a{
+    text-decoration: none;
+}

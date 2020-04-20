@@ -6,7 +6,7 @@ $alreadyCrawled = array();
 $crawling = array();
 $alreadyFoundImages = array();
 
-$startUrl = "https://ipleones.cl/";
+$startUrl = $_GET["term"];
 followLinks($startUrl);
 
 function InsertLink($url, $title, $description, $keywords, $author){

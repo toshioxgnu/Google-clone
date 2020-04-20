@@ -23,12 +23,16 @@ class SitesResultsProvider
     }
 
     public function getResultsHtml($page, $pageSize, $term){
+        $fromLimit = ($page -1) * $pageSize;
+
         $query = $this -> con  -> prepare("select  *
         from sites where title like :term or url like :term or keywords like :term 
-        or description like :term order by clicks desc");
+        or description like :term order by clicks desc LIMIT :fromLimit , :pageSize");
 
         $searchterm = "%".$term."%";
         $query -> bindparam(":term", $searchterm );
+        $query -> bindparam(":fromLimit", $fromLimit, PDO::PARAM_INT);
+        $query -> bindparam(":pageSize", $pageSize ,PDO::PARAM_INT);
         $query -> execute();
 
         $resultsHtml = "<div class='sitesResults'>";
