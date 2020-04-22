@@ -4,6 +4,7 @@
     <?php
         include("config.php");
         include("classes/SitesResultsProvider.php");
+        include("classes/ImageResultProvider.php");
         $term = isset($_GET['term']) ? $_GET['term'] : "hallo";
         $type = isset($_GET['type']) ?  $_GET['type'] : "sites";
         $page = isset($_GET['page']) ?  $_GET['page'] : 1;
@@ -27,9 +28,11 @@
                 </div>
                 
                 <div class="searchContainer">
+
                     <form action="search.php" method="GET">
                         <div class="searchBarContainer">
-                            <input type="text" name="term" class="searchBar" value="<?php echo $term?>" >
+                            <input type="hidden" name="type" value="<? echo $type; ?>">
+                            <input type="text" id="search" name="term" class="searchBar" value="<?php echo $term?>" >
                             <button class="search"><i class="fas fa-search"></i></button>
                         </div>
                     </form>
@@ -47,8 +50,14 @@
 
         <div class="mainresultsection">
             <?php
+            if ($type == "sites"){
                 $resultsProvider = new SitesResultsProvider($con);
                 $pageSize = 20;
+            }else{
+                $resultsProvider = new ImageResultProvider($con);
+                $pageSize = 30;
+            }
+
                 $numResults =  $resultsProvider -> getnumResults($term);
 
                 echo "<p class='resultCount'> $numResults  Results Found</p>";
